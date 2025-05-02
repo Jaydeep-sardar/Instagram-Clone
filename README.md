@@ -29,7 +29,7 @@ A responsive and interactive Instagram UI clone built using **HTML**, **Tailwind
 
 ```
 
-📦 instagram-clone/
+📦 instagram/
 ├── 📁 assets/
 │   └── 🖼️ Screenshot.png     # Project preview image
 ├── 📄 index.html             # Main HTML file
