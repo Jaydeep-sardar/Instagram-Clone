@@ -18,7 +18,8 @@ A responsive and interactive Instagram UI clone built using **HTML**, **Tailwind
 
 ## 🖼️ Screenshot
 
-![Instagram Clone Screenshot](./assets/Screenshot.png)
+![Screenshot](assets/Screenshot%20.png)
+
 
 
 
