@@ -18,7 +18,7 @@ A responsive and interactive Instagram UI clone built using **HTML**, **Tailwind
 
 ## 🖼️ Screenshot
 
-![Instagram Clone Screenshot](.Screenshot.png)
+![Instagram Clone Screenshot](Screenshot.png)
 
 ---
 
@@ -53,8 +53,7 @@ A responsive and interactive Instagram UI clone built using **HTML**, **Tailwind
 
 ## 👤 Author
 
-**Jaydeep**
-[GitHub](https://github.com/jaydeep-sardar) 
+**Jaydeep sardar**
 
 ---
 🙏 Thank You!
