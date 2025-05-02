@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-black">
+    <!-- Main Layout -->
+    <div class="main-wrapper">
+        <!-- Left Sidebar -->
+        <div class="w-64 bg-black fixed left-0 top-0 h-screen">
+            <div class="p-4">
+                <!-- Instagram Name -->
+                <div class="mb-4">
+                    <span class="instagram-font text-2xl text-white">Instagram</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="space-y-2">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-compass"></i>
+                        <span>Explore</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-film"></i>
+                        <span>Reels</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Messages</span>
+                        <div class="message-badge">
+                            <span class="message-count">3</span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-heart">
+                            <span class="notification-dot"></span>
+                        </i>
+                        <span>Notifications</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-plus-square"></i>
+                        <span>Create</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+
+                <!-- Bottom Navigation -->
+                <div class="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+                    <!-- Meta AI -->
+                    <div class="nav-item">
+                        <i class="fas fa-robot"></i>
+                        <span>Meta AI</span>
+                    </div>
+
+                    <!-- Threads -->
+                    <div class="nav-item">
+                        <i class="fas fa-comment-dots"></i>
+                        <span>Threads</span>
+                    </div>
+
+                    <!-- More Options -->
+                    <div class="nav-item">
+                        <i class="fas fa-bars"></i>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="max-w-screen-lg mx-auto px-4 pt-8">
+                <!-- Stories Section -->
+                <div class="bg-black p-4 mb-4 relative">
+                    <div class="stories-container flex space-x-4 overflow-x-auto touch-pan-x">
+                        <!-- My Story -->
+                        <div class="flex flex-col items-center">
+                            <div class="story-circle relative">
+                                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150&h=150&fit=crop"
+                                    alt="My Story" class="rounded-full">
+                                <div class="add-story">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <span class="text-xs mt-1 text-white">Your Story</span>
+                        </div>
+                        <!-- Story items -->
+                        <div class="flex flex-col items-center">
+                            <div class="story-circle">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop"
+                                    alt="Story" class="rounded-full">
+                            </div>
+                            <span class="text-xs mt-1 text-white">jane_doe</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="story-circle">
+                                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&h=150&fit=crop"
+                                    alt="Story" class="rounded-full">
+                            </div>
+                            <span class="text-xs mt-1 text-white">john_smith</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="story-circle">
+                                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop"
+                                    alt="Story" class="rounded-full">
+                            </div>
+                            <span class="text-xs mt-1 text-white">travel_lover</span>
+                        </div>
+                    </div>
+                    <!-- Next Stories Button -->
+                    <button class="next-stories-btn">
+                        <i class="fas fa-chevron-right text-white text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Posts Section -->
+                <div class="space-y-4">
+                    <!-- Video Post 1 -->
+                    <div class="post bg-black border-gray-800">
+                        <div class="post-header">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&h=50&fit=crop"
+                                alt="Profile" class="rounded-full">
+                            <span class="font-semibold text-white">jane_doe</span>
+                            <i class="fas fa-ellipsis-h text-white ml-auto"></i>
+                        </div>
+                        <div class="post-video relative">
+                            <video class="w-full" autoplay muted loop playsinline
+                                poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=800&fit=crop">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-woman-dancing-under-neon-lights-1230-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div class="video-speaker">
+                                <i class="fas fa-volume-mute"></i>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <div class="flex space-x-4">
+                                <i class="far fa-heart text-white"></i>
+                                <i class="far fa-comment text-white"></i>
+                                <i class="far fa-paper-plane text-white"></i>
+                            </div>
+                            <i class="far fa-bookmark text-white"></i>
+                        </div>
+                        <div class="post-likes text-white">2,567 likes</div>
+                        <div class="post-caption text-white">
+                            <span class="font-semibold">jane_doe</span> Dancing under the neon lights! 💃 #dance #neon
+                        </div>
+                        <div class="post-comments px-4 py-2">
+                            <a href="#" class="text-gray-400 text-sm mb-2 block">View all 189 comments</a>
+                        </div>
+                        <div class="post-time text-gray-400 text-xs px-4 pb-2">3 HOURS AGO</div>
+                        <div class="post-add-comment px-4 py-2 border-t border-gray-800">
+                            <div class="flex items-center">
+                                <i class="far fa-smile text-white text-xl mr-4"></i>
+                                <input type="text" placeholder="Add a comment..."
+                                    class="bg-transparent text-white text-sm w-full focus:outline-none" />
+                                <button class="text-blue-500 font-semibold text-sm ml-2">Post</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 1 -->
+                    <div class="post bg-black border-gray-800">
+                        <div class="post-header">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&h=50&fit=crop"
+                                alt="Profile" class="rounded-full">
+                            <span class="font-semibold text-white">jane_doe</span>
+                            <i class="fas fa-ellipsis-h text-white ml-auto"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=800&fit=crop"
+                            alt="Post" class="post-image">
+                        <div class="post-actions">
+                            <div class="flex space-x-4">
+                                <i class="far fa-heart text-white"></i>
+                                <i class="far fa-comment text-white"></i>
+                                <i class="far fa-paper-plane text-white"></i>
+                            </div>
+                            <i class="far fa-bookmark text-white"></i>
+                        </div>
+                        <div class="post-likes text-white">1,234 likes</div>
+                        <div class="post-caption text-white">
+                            <span class="font-semibold">jane_doe</span> Beautiful sunset at the beach! 🌅 #sunset #beach
+                        </div>
+                        <div class="post-comments px-4 py-2">
+                            <a href="#" class="text-gray-400 text-sm mb-2 block">View all 128 comments</a>
+                        </div>
+                        <div class="post-time text-gray-400 text-xs px-4 pb-2">2 HOURS AGO</div>
+                        <div class="post-add-comment px-4 py-2 border-t border-gray-800">
+                            <div class="flex items-center">
+                                <i class="far fa-smile text-white text-xl mr-4"></i>
+                                <input type="text" placeholder="Add a comment..."
+                                    class="bg-transparent text-white text-sm w-full focus:outline-none" />
+                                <button class="text-blue-500 font-semibold text-sm ml-2">Post</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Post 2 -->
+                    <div class="post bg-black border-gray-800">
+                        <div class="post-header">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=50&h=50&fit=crop"
+                                alt="Profile" class="rounded-full">
+                            <span class="font-semibold text-white">john_smith</span>
+                            <i class="fas fa-ellipsis-h text-white ml-auto"></i>
+                        </div>
+                        <div class="post-video relative">
+                            <video class="w-full" autoplay muted loop playsinline
+                                poster="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&h=800&fit=crop">
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-cat-playing-with-a-ball-of-yarn-1230-large.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div class="video-speaker">
+                                <i class="fas fa-volume-mute"></i>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <div class="flex space-x-4">
+                                <i class="far fa-heart text-white"></i>
+                                <i class="far fa-comment text-white"></i>
+                                <i class="far fa-paper-plane text-white"></i>
+                            </div>
+                            <i class="far fa-bookmark text-white"></i>
+                        </div>
+                        <div class="post-likes text-white">3,456 likes</div>
+                        <div class="post-caption text-white">
+                            <span class="font-semibold">john_smith</span> My cat's new favorite toy! 🐱 #cat #pet
+                        </div>
+                        <div class="post-comments px-4 py-2">
+                            <a href="#" class="text-gray-400 text-sm mb-2 block">View all 245 comments</a>
+                        </div>
+                        <div class="post-time text-gray-400 text-xs px-4 pb-2">5 HOURS AGO</div>
+                        <div class="post-add-comment px-4 py-2 border-t border-gray-800">
+                            <div class="flex items-center">
+                                <i class="far fa-smile text-white text-xl mr-4"></i>
+                                <input type="text" placeholder="Add a comment..."
+                                    class="bg-transparent text-white text-sm w-full focus:outline-none" />
+                                <button class="text-blue-500 font-semibold text-sm ml-2">Post</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="post bg-black border-gray-800">
+                        <div class="post-header">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=50&h=50&fit=crop"
+                                alt="Profile" class="rounded-full">
+                            <span class="font-semibold text-white">john_smith</span>
+                            <i class="fas fa-ellipsis-h text-white ml-auto"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&h=800&fit=crop"
+                            alt="Post" class="post-image">
+                        <div class="post-actions">
+                            <div class="flex space-x-4">
+                                <i class="far fa-heart text-white"></i>
+                                <i class="far fa-comment text-white"></i>
+                                <i class="far fa-paper-plane text-white"></i>
+                            </div>
+                            <i class="far fa-bookmark text-white"></i>
+                        </div>
+                        <div class="post-likes text-white">2,345 likes</div>
+                        <div class="post-caption text-white">
+                            <span class="font-semibold">john_smith</span> Just adopted this little guy! 🐱 #cat #pet
+                        </div>
+                        <div class="post-comments px-4 py-2">
+                            <a href="#" class="text-gray-400 text-sm mb-2 block">View all 256 comments</a>
+                        </div>
+                        <div class="post-time text-gray-400 text-xs px-4 pb-2">5 HOURS AGO</div>
+                        <div class="post-add-comment px-4 py-2 border-t border-gray-800">
+                            <div class="flex items-center">
+                                <i class="far fa-smile text-white text-xl mr-4"></i>
+                                <input type="text" placeholder="Add a comment..."
+                                    class="bg-transparent text-white text-sm w-full focus:outline-none" />
+                                <button class="text-blue-500 font-semibold text-sm ml-2">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div
+            class="hidden lg:block w-80 fixed right-0 top-0 h-screen overflow-y-auto bg-black border-l border-gray-800">
+            <div class="p-4">
+                <!-- User Profile -->
+                <div class="flex items-center space-x-4 mb-4">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=50&h=50&fit=crop"
+                        alt="Profile" class="rounded-full w-12 h-12">
+                    <div>
+                        <p class="font-semibold text-white">travel_lover</p>
+                        <p class="text-gray-400 text-sm">Travel Enthusiast</p>
+                    </div>
+                </div>
+
+                <!-- Suggestions -->
+                <div class="text-sm">
+                    <div class="flex justify-between items-center mb-2">
+                        <p class="text-gray-400">Suggestions for you</p>
+                        <a href="#" class="text-xs font-semibold text-white">See All</a>
+                    </div>
+                    <!-- Suggested Accounts -->
+                    <div class="space-y-4">
+                        <!-- Suggestion 1 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">photography_lover</p>
+                                    <p class="text-gray-400 text-xs">New to Instagram</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 2 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">foodie_adventures</p>
+                                    <p class="text-gray-400 text-xs">Followed by john_smith</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 3 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">fitness_motivation</p>
+                                    <p class="text-gray-400 text-xs">Followed by jane_doe</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 4 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">tech_enthusiast</p>
+                                    <p class="text-gray-400 text-xs">Followed by travel_lover</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 5 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">fashion_icon</p>
+                                    <p class="text-gray-400 text-xs">Followed by 2 others</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 6 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">art_lover</p>
+                                    <p class="text-gray-400 text-xs">Followed by photography_lover</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 7 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1531389404900-4398fcc6d5c8?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">music_enthusiast</p>
+                                    <p class="text-gray-400 text-xs">Followed by 3 others</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+
+                        <!-- Suggestion 8 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1524502397800-2eea8097c724?w=50&h=50&fit=crop"
+                                    alt="Profile" class="rounded-full w-8 h-8">
+                                <div>
+                                    <p class="font-semibold text-sm text-white">travel_photographer</p>
+                                    <p class="text-gray-400 text-xs">Followed by travel_lover</p>
+                                </div>
+                            </div>
+                            <button class="text-blue-500 text-xs font-semibold">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="text-gray-400">Meta</a>
+                <a href="#" class="text-gray-400">About</a>
+                <a href="#" class="text-gray-400">Blog</a>
+                <a href="#" class="text-gray-400">Jobs</a>
+                <a href="#" class="text-gray-400">Help</a>
+                <a href="#" class="text-gray-400">API</a>
+                <a href="#" class="text-gray-400">Privacy</a>
+                <a href="#" class="text-gray-400">Terms</a>
+                <a href="#" class="text-gray-400">Top Accounts</a>
+                <a href="#" class="text-gray-400">Hashtags</a>
+                <a href="#" class="text-gray-400">Locations</a>
+                <a href="#" class="text-gray-400">Instagram Lite</a>
+                <a href="#" class="text-gray-400">Contact Uploading & Non-Users</a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="text-gray-400">Dance</a>
+                <a href="#" class="text-gray-400">Food & Drink</a>
+                <a href="#" class="text-gray-400">Home & Garden</a>
+                <a href="#" class="text-gray-400">Music</a>
+                <a href="#" class="text-gray-400">Visual Arts</a>
+            </div>
+            <div class="footer-copyright">
+                <div class="flex justify-center items-center space-x-4 mb-4">
+                    <select class="bg-transparent text-gray-400 text-xs border-none focus:outline-none">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                    <span class="text-gray-400">© 2024 Instagram from Meta</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
